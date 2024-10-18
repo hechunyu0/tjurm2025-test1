@@ -7,7 +7,13 @@ int my_strlen(char *str) {
      */
 
     // IMPLEMENT YOUR CODE HERE
-    return 0;
+
+    int len=0;
+    while(str[len]!=0){
+        len++;
+    }
+    
+    return len;
 }
 
 
@@ -19,6 +25,18 @@ void my_strcat(char *str_1, char *str_2) {
      */
 
     // IMPLEMENT YOUR CODE HERE
+
+    while(*str_1){
+        str_1++;
+    }
+    while(*str_2){
+        *str_1=*str_2;
+        str_1++;
+        str_2++;
+    }
+    *str_1='\0';
+    
+    return str_1;
 }
 
 
